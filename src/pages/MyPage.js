@@ -38,7 +38,7 @@ export default function MyPage() {
       let data = await getDocs(q);
       setStudent(data.docs.map((doc) => ({ ...doc.data() })))
       //console.log(studentCollectionRef)
-     
+
     }
     //students.map((stu) => setId(stu.id))
     getStudents().then(() => console.log(students))
@@ -60,6 +60,7 @@ export default function MyPage() {
     const çıkış = async () => {
       const stuDoc = doc(db, "students", id)
       await updateDoc(stuDoc, { login: "false", logOutTime: now })
+      window.location.href = "http://localhost:3000/";
     }
     çıkış();
 
@@ -76,10 +77,10 @@ export default function MyPage() {
             <List.Content >
               <List.Header> {students.map((s) => <h1>{s.name} {s.surname}</h1>)} </List.Header>
               {students.map((s) => (s.email))}
-             
 
-<List.Item> {students.map((s) => (s.department))}</List.Item>
-              
+
+              <List.Item> {students.map((s) => (s.department))}</List.Item>
+
             </List.Content>
           </List.Item></List >
 

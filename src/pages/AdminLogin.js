@@ -57,7 +57,7 @@ export default function AdminLogin() {
           const adminDoc = doc(db, "admins", data.docs.map((doc) => ({ ...doc.data() }))[0].id)
           await updateDoc(adminDoc, { login: "true" })
 
-          window.location.assign(`/adminPage/${data.docs.map((doc) => ({ ...doc.data() }))[0].id}/profil`)
+          window.location.assign(`/adminPage/${data.docs.map((doc) => ({ ...doc.data() }))[0].id}/`)
 
         }
 

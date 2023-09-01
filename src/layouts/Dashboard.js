@@ -41,85 +41,38 @@ import SecretaryInternshipList from '../pages/SecretaryInternshipList';
 import SecretaryInternshipDetail from '../pages/SecretaryInternshipDetail';
 import SecretaryCompanies from '../pages/SecretaryCompanies';
 import SecretaryCompanyDetail from '../pages/SecretaryCompanyDetail';
+import Sol from './Sol';
+import Sag from './Sag';
 
 export default function Dashboard() {
     return (
-        
+
         <div >
+
             <Routes>
 
-            <Route exact path="/" element={<Login />} />
-            <Route exact path="/adminLogin" element={<AdminLogin />} />
-            <Route exact path="/secretaryLogin" element={<SecretaryLogin />} />
-            <Route exact path="/addstudent" element={<AddStudent />} />
-
+                <Route path="/" element={<Login />} />
+                <Route path="/adminLogin" element={<AdminLogin />} />
+                <Route path="/secretaryLogin" element={<SecretaryLogin />} />
+                <Route path="/addstudent" element={<AddStudent />} />
 
             </Routes>
 
-            
+
+
             <Grid  >
                 <Grid.Row>
                     <Grid.Column width={3}>
-                    <Routes>
 
-
-                            <Route exact path="/students" element={<StudentList />}/>
-                            <Route path="/myPage/:id"element={<MyPage />}/>
-                            <Route path="/adminPage/:id" element={<AdminPage />}/>
-                            <Route path="/secretaryPage/:id" element={<SecretaryPage />}/>
-
-                            <Route path="/internshiprequest" element={<InternshipRequestList />} />
-
-
-                            </Routes>
-
-
+                        <Sol/>
                     </Grid.Column>
-                    <Grid.Column width={11}>
-                    <Routes>
-
-                        <Route exact path="/myPage/:id/MyInternshipRequest" element={<MyInternshiprequest />} />
-                        <Route path="/myPage/:id/MyInternshipRequestAdd"element={<AddInternshipRequest />}/>
-                        <Route path="/myPage/:id/AddCompany" element={<AddCompany />} />
-                        <Route path="/myPage/:id/Companies" element={<Companies />} />
-                        <Route path="/myPage/:id/Profil" element={<Profil />}/>
-
-
-                        <Route exact path="/adminPage/:id/Companies" element={<Companies />}/>
-                        <Route path="/adminPage/:id/AddCompany" element={<AddCompany />}/>
-                        <Route exact path="/adminPage/:id/ApprovedConfirmCompanies" element={<ApprovedConfirmCompanies />}/>
-                        <Route exact path="/adminPage/:id/RejectedConfirmCompanies" element={<RejectedConfirm />}/>
-                        <Route exact path="/adminPage/:id/UncertainConfirmCompanies" element={<UncertainConfirmCompanies />}/>
-                        <Route exact path="/adminPage/:id/CompaniesList"element={<CompaniesList />} />
-
-                        <Route exact path="/adminPage/:id/ApprovedInternshipRequest" element={<ApprovedInternshipRequest />}/>
-                        <Route exact path="/adminPage/:id/RejectedInternshipRequest" element={<RejectedInternshipRequest />} />
-                        <Route exact path="/adminPage/:id/UncertainInternshipRequest" element={<UncertainInternshipRequest />} />
-                        <Route exact path="/adminPage/:id/InternshipRequests" element={<InternshipRequestList />}/>
-
-                        <Route exact path="/secretaryPage/:id/InternshipRequests" element={<SecretaryInternshipList />}/>
-                        <Route exact path="/secretaryPage/:id/InternshipRequests/:idd" element={<SecretaryInternshipDetail />}/>
-                        <Route exact path="/secretaryPage/:id/CompaniesList" element={<SecretaryCompanies />}/>
-                        <Route exact path="/secretaryPage/:id/CompaniesList/:idd" element={<SecretaryCompanyDetail />}/>
-
-                        <Route exact path="/myPage/:id/MyInternshipRequest/:idd" element={<MyInternshipRequestDetail />} />
-                        <Route exact path="/adminPage/:id/ApprovedConfirmCompanies/:idd"element={<CompanyDetail />} />
-                        <Route exact path="/adminPage/:id/RejectedConfirmCompanies/:idd" element={<CompanyDetail />}/>
-                        <Route exact path="/adminPage/:id/UncertainConfirmCompanies/:idd" element={<CompanyDetail />}/>
-                        <Route exact path="/adminPage/:id/CompaniesList/:idd" element={<CompanyDetail />} />
-
-
-                        <Route exact path="/adminPage/:id/ApprovedInternshipRequest/:idd" element={<InternshipRequestDetail />} />
-                        <Route exact path="/adminPage/:id/RejectedInternshipRequest/:idd" element={<InternshipRequestDetail />} />
-                        <Route exact path="/adminPage/:id/UncertainInternshipRequest/:idd" element={<InternshipRequestDetail />} />
-                        <Route exact path="/adminPage/:id/InternshipRequests/:idd" element={<InternshipRequestDetail />}/>
-
-                        </Routes>
-
+                    <Grid.Column width={12} >
+                        <Sag />
                     </Grid.Column>
-              
+
                 </Grid.Row>
             </Grid>
+
 
         </div>
     )

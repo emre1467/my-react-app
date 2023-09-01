@@ -42,6 +42,8 @@ export default function AdminPage() {
     const çıkış = async () => {
       const adminDoc = doc(db, "admins", id)
       await updateDoc(adminDoc, { login: "false" })
+      window.location.href = "http://localhost:3000/";
+
     }
     çıkış();
 

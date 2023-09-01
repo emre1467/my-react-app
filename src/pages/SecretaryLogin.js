@@ -58,7 +58,7 @@ export default function SecretaryLogin() {
           const secretaryDoc = doc(db, "secretary", data.docs.map((doc) => ({ ...doc.data() }))[0].id)
           await updateDoc(secretaryDoc, { login: "true" })
 
-          window.location.assign(`/secretaryPage/${data.docs.map((doc) => ({ ...doc.data() }))[0].id}/profil`)
+          window.location.assign(`/secretaryPage/${data.docs.map((doc) => ({ ...doc.data() }))[0].id}/`)
 
         }
 
