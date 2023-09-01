@@ -60,7 +60,7 @@ export default function MyPage() {
     const çıkış = async () => {
       const stuDoc = doc(db, "students", id)
       await updateDoc(stuDoc, { login: "false", logOutTime: now })
-      window.location.href = "http://localhost:3000/";
+      window.location.href = "/";
     }
     çıkış();
 

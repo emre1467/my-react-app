@@ -41,7 +41,7 @@ export default function SecretaryPage() {
       const çıkış = async () => {
         const secretaryDoc = doc(db, "secretary", id)
         await updateDoc(secretaryDoc, { login: "false" })
-      window.location.href = "http://localhost:3000/";
+      window.location.href = "/";
 
       }
       çıkış();
