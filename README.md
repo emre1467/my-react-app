@@ -1,6 +1,6 @@
 # Projem react ile oluşturulmuştur. Amacı staj bilgi ve belgelerini okula gitmeden sisteme yüklenmesidir. Bu yüklenen belge ve bilgilerinde öğretim görevlisi tarafından görülebilmesi amaçlanmıştır.
 Sistemim deneme erişimine açıktır. Ekranda görülen mail ve şifre ile girilebilmektedir.
-Link: https://my-react-app-2vt2-m1dslhz77-emre1467.vercel.app/myPage/2rvlIpjGuMHp66FbXVAv/MyInternshipRequest/kku45iZP9dKTnakqAX1E
+Link: https://my-react-app-2vt2-m1dslhz77-emre1467.vercel.app/
 
 
 Login Ekranı
